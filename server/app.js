@@ -8,7 +8,8 @@ const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 
 const originsWhitelist = [
-  'http://localhost:4200'
+  'http://localhost:4200',
+  'https://jrejoire.github.io/tictactoe/'
 ];
 
 const corsOptions = {
