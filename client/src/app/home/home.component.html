@@ -1,0 +1,44 @@
+<div class='container h-100'>
+    <div class='main row'>
+        <div id='sidebar' class='col-md-3 text-center'>
+            <div class="sidebar-header mt-4">
+                <h3 class="title">TicTacToe</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <h4>User: {{userDisplayName}}</h4>
+                </li>
+                <li>
+                    <button routerLink="/game" class='mt-4 btn btn-outline-dark'>Start Game</button>
+                </li>
+                <li>
+                    <button (click)="logout()" class='mt-4 btn btn-outline-dark'>Log Out</button>
+                </li>
+            </ul>
+        </div>
+        <div id='content' class='col-md-9 mt-4'>
+            <div class='row h-100 d-flex justify-content-center'>
+                <h3 class='col-md-12 dashboard'>
+                    Your Dashboard
+                </h3>
+                <section id="first-section" class="row h-45 w-100 text-center">
+                    <div class='col-md-12'>
+                        <h3>Number of games played</h3>
+                        <div>0</div>
+                    </div>
+                </section>
+                <section id='second-section' class='row h-45 w-100 text-center'>
+                    <span class='col-md-6 h-100'>
+                        <h3>Number of games won</h3>
+                        <div>0</div>
+                    </span>
+                    <span class='col-md-6 h-100'>
+                        <h3>Number of games lost</h3>
+                        <div>0</div>
+                    </span>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

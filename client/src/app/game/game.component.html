@@ -1,0 +1,33 @@
+<div class="container">
+    <div class='row d-flex justify-content-center content text-center'>
+        <div class='col-mb-6 text-center'>
+            <div class='row mb-2 mt-2 d-flex justify-content-center'>
+                <h1 class='title'>TicTacToe</h1>
+            </div>
+            <div class='row mb-2 d-flex justify-content-center'>
+                <h3 class='mb-2'>Current Player: {{ player }} </h3>
+            </div>
+            <div class='row mb-2 d-flex justify-content-center'>
+                <h3 *ngIf="result">
+                    {{ result }}
+                </h3>
+            </div>
+            <main class='row mb-2 text-center'>
+                <app-square 
+                    *ngFor="let val of squares; let i = index" 
+                    [value]="val"
+                    (click)="makeMove(i)"> 
+                </app-square>
+            </main>
+
+            <div class='row'>
+                <div class='col-md-6'>
+                    <button nbButton outline status="danger" (click)="newGame()" class='btn btn-outline-dark'>Replay</button>
+                </div>
+                <div class='col-md-6'>
+                    <button nbButton outline status="danger" routerLink='/home' class='btn btn-outline-dark'>Home</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>

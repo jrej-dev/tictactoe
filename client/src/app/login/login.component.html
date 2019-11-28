@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class='col-md-6'>
+      <h1 class='mt-5 mb-5'>TicTacToe</h1>
+      <h3 class='mb-4'>Login Page</h3>
+      <h4 *ngIf="error" class='mb-4'>{{error}}</h4>
+      <form (ngSubmit)="submit()">
+        <div class='mb-2'>
+          <input type="text" name="username" placeholder="Email" class="form-control" [(ngModel)]="username" />
+        </div>
+        <div class='mb-4'>
+          <input type="password" name="password" placeholder="Password" class="form-control" [(ngModel)]="password" />
+        </div>
+        <div class='mt-4 mb-4'>
+          <button type="submit" id="submit" class='btn btn-outline-dark'>Submit</button>
+        </div>
+        <p>Not a user? <a routerLink="/signup"> Signup</a> here.</p>
+      </form>
+    </div>
+  </div>
+</div>

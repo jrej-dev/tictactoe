@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+
+main {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 0px;
+}
+  
+app-square {
+    border: 1px gray solid;
+    height: 150px;
+}
+
+.container {
+    background-color: darkturquoise;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+.title {
+    font-family: 'Sigmar One', cursive;
+    color: black;
+    text-align: center;
+}
