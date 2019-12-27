@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './auth.service';
+import { AmplifyService } from 'aws-amplify-angular';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,22 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private auth: AuthService, private router: Router) { }
+  signedIn: boolean;
+  user: any;
+  greeting: string;
 
-  logout() {
-    this.auth.logout();
-    this.router.navigate(['login']);
+  constructor(private router: Router, private amplifyService: AmplifyService) {
+    this.amplifyService.authStateChange$
+    .subscribe(authState => {
+      this.signedIn = authState.state === 'signedIn';
+      if (!authState.user) {
+          this.user = null;
+      } else {
+          this.user = authState.user;
+          this.greeting = "Hello " + this.user.username;
+          console.log(this.greeting);
+          this.router.navigate(['home']);
+      }
+    });
   }
 }

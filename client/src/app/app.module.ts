@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
-import { JwtModule } from '@auth0/angular-jwt';
-import { AuthService } from './auth.service';
-import { AuthGuard } from './auth.guard';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,11 +11,11 @@ import { SquareComponent } from './square/square.component';
 import { GameComponent } from './game/game.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { SignupComponent } from './signup/signup.component';
+import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
 
-export function tokenGetter() {
-  return localStorage.getItem('access_token');
-}
+import Amplify from '@aws-amplify/auth';
+import awsconfig from '../aws-exports';
+Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [
@@ -26,25 +23,17 @@ export function tokenGetter() {
     SquareComponent,
     GameComponent,
     LoginComponent,
-    HomeComponent,
-    SignupComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        whitelistedDomains: ['http://localhost:4000'],
-        blacklistedRoutes: ['http://localhost:4000/api/auth']
-      }
-    })
+    AmplifyAngularModule,
   ],
   providers: [
-    AuthService,
-    AuthGuard
+    AmplifyService
   ],
   bootstrap: [AppComponent]
 })

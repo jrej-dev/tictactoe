@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
-import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +6,5 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  public username: string;
-  public password: string;
-  public error: string;
-
-  constructor(private auth: AuthService, private router: Router) { }
-
-  public submit() {
-    this.auth.login(this.username, this.password)
-      .pipe(first())
-      .subscribe(
-        result => this.router.navigate(['home']),
-        err => this.error = 'Could not authenticate'
-      );
-  }
+  constructor() { }
 }
