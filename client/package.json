@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "[ -f src/aws-exports.js ] && mv src/aws-exports.js src/aws-exports.ts || ng serve; ng serve",
-    "build": "[ -f src/aws-exports.js ] && mv src/aws-exports.js src/aws-exports.ts || ng build --prod; ng build --prod",
+    "start": "ng serve",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.14",
     "@auth0/angular-jwt": "^3.0.1",
     "@aws-amplify/auth": "^2.1.1",
-    "@aws-amplify/core": "^2.2.0",
+    "@aws-amplify/core": "^2.2.1",
     "@aws-amplify/ui": "^1.1.3",
     "aws-amplify": "^1.2.4",
     "aws-amplify-angular": "^3.1.4",

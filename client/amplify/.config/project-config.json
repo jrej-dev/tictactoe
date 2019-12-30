@@ -1,13 +1,13 @@
 {
     "projectName": "tictactoe",
-    "version": "2.0",
+    "version": "3.0",
     "frontend": "javascript",
     "javascript": {
         "framework": "angular",
         "config": {
             "SourceDir": "src",
             "DistributionDir": "dist",
-            "BuildCommand": "npm run-script build",
+            "BuildCommand": "npm.cmd run-script build",
             "StartCommand": "ng serve"
         }
     },

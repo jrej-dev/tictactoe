@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth } from "aws-amplify";
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   logout() {
+    Auth.signOut();
     this.router.navigate(['login']);
   }
 

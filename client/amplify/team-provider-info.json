@@ -1,19 +1,26 @@
 {
     "angular": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-tictactoe-angular-160844-authRole",
-            "UnauthRoleArn": "arn:aws:iam::673009735256:role/amplify-tictactoe-angular-160844-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::673009735256:role/amplify-tictactoe-angular-160844-authRole",
+            "AuthRoleName": "amplify-tictactoe-angular-60128-authRole",
+            "UnauthRoleArn": "arn:aws:iam::673009735256:role/amplify-tictactoe-angular-60128-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::673009735256:role/amplify-tictactoe-angular-60128-authRole",
             "Region": "eu-west-2",
-            "DeploymentBucketName": "amplify-tictactoe-angular-160844-deployment",
-            "UnauthRoleName": "amplify-tictactoe-angular-160844-unauthRole",
-            "StackName": "amplify-tictactoe-angular-160844",
-            "StackId": "arn:aws:cloudformation:eu-west-2:673009735256:stack/amplify-tictactoe-angular-160844/9ef71650-233a-11ea-b811-060e4e394d84",
-            "AmplifyAppId": "d3hgl2cxrd0pvs"
+            "DeploymentBucketName": "amplify-tictactoe-angular-60128-deployment",
+            "UnauthRoleName": "amplify-tictactoe-angular-60128-unauthRole",
+            "StackName": "amplify-tictactoe-angular-60128",
+            "StackId": "arn:aws:cloudformation:eu-west-2:673009735256:stack/amplify-tictactoe-angular-60128/6601a520-2ac1-11ea-89fe-06af0f49b59c",
+            "AmplifyAppId": "d3op1flm8dkhnw"
         },
         "categories": {
+            "function": {
+                "tictactoece54c3d5CustomMessage": {
+                    "REDIRECTURL": "",
+                    "EMAILSUBJECT": "",
+                    "EMAILMESSAGE": ""
+                }
+            },
             "auth": {
-                "tictactoe7274fda3": {}
+                "tictactoece54c3d5": {}
             }
         }
     }

@@ -1,0 +1,14 @@
+{
+    "trigger": true,
+    "modules": [
+        "verification-link"
+    ],
+    "parentResource": "tictactoece54c3d5",
+    "functionName": "tictactoece54c3d5CustomMessage",
+    "parentStack": "auth",
+    "triggerEnvs": "[{\"key\":\"RESOURCENAME\",\"value\":\"resourceName\"}]",
+    "triggerTemplate": "CustomMessage.json.ejs",
+    "roleName": "tictactoece54c3d5CustomMessage",
+    "skipEdit": true,
+    "resourceName": "tictactoece54c3d5CustomMessage"
+}
